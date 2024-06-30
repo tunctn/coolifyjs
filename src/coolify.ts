@@ -58,6 +58,11 @@ export class Coolify {
   get instance() {
     return this._instance;
   }
+
+  get version() {
+    return this._instance.version;
+  }
+
   public fetchRequest = async <T>({ path, method, body, requestOptions = {} }: FetchParams): Promise<T> => {
     const { headers, ...rest } = requestOptions;
     requestOptions = {

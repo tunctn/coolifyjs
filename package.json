@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "main": "./dist/src/index.js",
   "types": "./src/index",
