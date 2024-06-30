@@ -80,9 +80,3 @@ export class Coolify {
     }
   };
 }
-
-const coolify = new Coolify({
-  url: 'https://api.coolify.io',
-  version: 'v1',
-  apiToken: 'test',
-});
