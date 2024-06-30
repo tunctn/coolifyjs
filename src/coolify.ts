@@ -1,10 +1,20 @@
 import { Applications } from './routes/applications/applications';
 import { Envs } from './routes/envs/envs';
 import { Projects } from './routes/projects/projects';
+import { Resources } from './routes/resources/resources';
+import { Servers } from './routes/servers/servers';
 import { Teams } from './routes/teams/teams';
 import { Utils } from './routes/utils/utils';
+import { Webhooks } from './routes/webhooks/webhooks';
 
+export * from './routes/applications';
+export * from './routes/envs';
+export * from './routes/projects';
+export * from './routes/resources';
+export * from './routes/servers';
+export * from './routes/teams';
 export * from './routes/utils';
+export * from './routes/webhooks';
 
 export interface CoolifyInstance {
   url: string;
@@ -29,6 +39,9 @@ export class Coolify {
   readonly envs = new Envs(this);
   readonly teams = new Teams(this);
   readonly projects = new Projects(this);
+  readonly servers = new Servers(this);
+  readonly resources = new Resources(this);
+  readonly webhooks = new Webhooks(this);
 
   constructor(instance: CoolifyInstance) {
     this._instance = instance;
