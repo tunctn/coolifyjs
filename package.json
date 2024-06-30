@@ -13,6 +13,9 @@
     "url": "https://github.com/tunctn/coolifyjs.git"
   },
   "scripts": {
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
     "build": "tsc && npx swc src --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
