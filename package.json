@@ -7,6 +7,10 @@
   },
   "main": "./dist/src/index.js",
   "types": "./src/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tunctn/coolifyjs.git"
+  },
   "scripts": {
     "build": "tsc && npx swc src --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
