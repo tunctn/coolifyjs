@@ -1,5 +1,7 @@
 import { Applications } from './routes/applications/applications';
 import { Envs } from './routes/envs/envs';
+import { Projects } from './routes/projects/projects';
+import { Teams } from './routes/teams/teams';
 import { Utils } from './routes/utils/utils';
 
 export * from './routes/utils';
@@ -25,6 +27,8 @@ export class Coolify {
   readonly applications = new Applications(this);
   readonly utils = new Utils(this);
   readonly envs = new Envs(this);
+  readonly teams = new Teams(this);
+  readonly projects = new Projects(this);
 
   constructor(instance: CoolifyInstance) {
     this._instance = instance;
