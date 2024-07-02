@@ -1,7 +1,12 @@
+import { Api } from './routes/api/api';
 import { Applications } from './routes/applications/applications';
+import { Databases } from './routes/databases/databases';
+import { Deployments } from './routes/deployments/deployments';
 import { Envs } from './routes/envs/envs';
+import { Feedback } from './routes/feedback/feedback';
 import { Projects } from './routes/projects/projects';
 import { Resources } from './routes/resources/resources';
+import { Security } from './routes/security/security';
 import { Servers } from './routes/servers/servers';
 import { Teams } from './routes/teams/teams';
 import { Utils } from './routes/utils/utils';
@@ -42,6 +47,11 @@ export class Coolify {
   readonly servers = new Servers(this);
   readonly resources = new Resources(this);
   readonly webhooks = new Webhooks(this);
+  readonly deployments = new Deployments(this);
+  readonly security = new Security(this);
+  readonly databases = new Databases(this);
+  readonly feedback = new Feedback(this);
+  readonly api = new Api(this);
 
   constructor(instance: CoolifyInstance) {
     this._instance = instance;
@@ -79,7 +89,7 @@ export class Coolify {
         ...requestOptions,
         body: JSON.stringify(body),
       });
-      return response.json() as T;
+      return (await response.json()) as T;
     } catch (err) {
       throw err;
     }
