@@ -1,9 +1,15 @@
 import { Coolify } from '../..';
+import {
+  CreateApplicationPayload,
+  CreateApplicationResponse,
+  DeleteApplicationByUUIDReponse,
+  DeployApplicationResponse,
+  GetApplicationsResponse,
+  RestartApplicationResponse,
+  StopApplicationResponse,
+} from './interfaces';
+
 import { ApplicationEnvs } from './envs/applications';
-import { CreateApplicationPayload, CreateApplicationResponse, DeleteApplicationByUUIDReponse, GetApplicationsResponse } from './interfaces';
-import { DeployApplicationResponse } from './interfaces/deploy-application';
-import { RestartApplicationResponse } from './interfaces/restart-application';
-import { StopApplicationResponse } from './interfaces/stop-application';
 
 export class Applications {
   readonly envs = new ApplicationEnvs(this.coolify);
