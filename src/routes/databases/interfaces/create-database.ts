@@ -1,4 +1,4 @@
-import { DatabaseType } from '../../../types';
+import { DatabaseType } from '../../../enums';
 
 export interface CreateDatabasePayload {
   type: DatabaseType;
